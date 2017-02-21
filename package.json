@@ -24,8 +24,8 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": "5.6.0",
-    "npm": "4.2.0"
+    "node": "^4.x.x || ^6.x.x",
+    "npm": ">= 3.x.x"
   },
   "scripts": {
     "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod; else gulp dev; fi",
