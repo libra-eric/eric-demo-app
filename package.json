@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "bluebird": "^3.4.6",
-    "electrode-archetype-react-app": "^2.0.0",
+    "electrode-archetype-react-app": "^1.5.0",
     "electrode-auto-ssr": "^1.0.0",
     "electrode-confippet": "^1.0.0",
     "electrode-react-ssr-caching": "^0.1.3",
