@@ -1,0 +1,48 @@
+{
+  "plugins": {
+    "inert": {
+      "enable": true
+    },
+    "electrodeStaticPaths": {
+      "enable": true,
+      "options": {
+        "pathPrefix": "dist"
+      }
+    },
+    "cdnPlugin": {
+      "module": "./src/server/plugins/cdn-plugin.js"
+    },
+    "webapp": {
+      "module": "./electrode-web-app/hapi",
+      "options": {
+        "pageTitle": "EventManager",
+        "paths": {
+          "/{args*}": {
+            "content": {
+              "module": "./{{env.APP_SRC_DIR}}/server/views/index-view"
+            }
+          }
+        },
+        "unbundledJS": {
+          "enterHead": [
+            {
+              "src": "http://code.jquery.com/jquery-1.10.2.min.js"
+            },
+            {
+              "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"
+            },
+            {
+              "src": "http://api.map.baidu.com/api?v=2.0&ak=tncfwzysdOyzGmqZkkrOWKYBmcc8YAa0"
+            },
+            {
+              "src": "http://dev.walmart.com:3000/cdn?file=ueditor.all.js"
+            }
+          ]
+        },
+        "unbundledStyle": [
+          "https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.css"
+        ]
+      }
+    }
+  }
+}
